@@ -1,0 +1,39 @@
+{
+  "name": "fondly/money-s4-api",
+  "description": "API wrapper for Money S4.",
+  "license": "GPL-3.0-or-later",
+  "type": "project",
+  "require": {
+    "php": ">=8.4",
+    "guzzlehttp/guzzle": "^7.9",
+    "symfony/var-dumper": "^7.0"
+  },
+  "require-dev": {
+    "squizlabs/php_codesniffer": "^3",
+    "phpcompatibility/php-compatibility": "*",
+    "slevomat/coding-standard": "^8.4",
+    "phpstan/phpstan": "^2.0",
+    "phpstan/phpstan-deprecation-rules": "^2.0",
+    "phpstan/phpstan-strict-rules": "^2.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Fondly\\Money\\": "src"
+    }
+  },
+  "scripts": {
+    "stan": "./vendor/bin/phpstan analyse",
+    "cs": "./vendor/bin/phpcs",
+    "cbf": "./vendor/bin/phpcbf",
+    "doc": "phpdoc run -d ./src/ -t ./api"
+  },
+  "prefer-stable": true,
+  "minimum-stability": "dev",
+  "config": {
+    "allow-plugins": {
+      "dealerdirect/phpcodesniffer-composer-installer": true,
+      "composer/package-versions-deprecated": true,
+      "php-http/discovery": true
+    }
+  }
+}
